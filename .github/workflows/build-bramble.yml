@@ -21,7 +21,7 @@ jobs:
       - name: Init DotGlass manifest
         run: |
           mkdir -p ~/dotglass && cd ~/dotglass
-          repo init -u https://github.com/Ojoruwa/dotglass_manifest.git -b main --git-lfs --depth=1
+          repo init -u https://github.com/Ojoruwa/dotglass_manifest.git -b main --depth=1
           repo sync -c --no-tags --no-clone-bundle -j$(nproc --all) --force-sync --optimized-fetch --prune
 
       - name: Apply DotGlass Glass QS patch
